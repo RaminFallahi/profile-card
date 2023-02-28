@@ -1,0 +1,138 @@
+body {
+  background: #f0f0f0;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  transition: 0.5s ease-in;
+  transition-delay: 0.5s;
+}
+
+.profile-card {
+  width: 18em;
+  background: #fff;
+  box-shadow: 0 0 5em rgba(0, 0, 0, 0.2);
+  padding: 2em;
+  position: relative;
+  padding-top: 16em;
+  overflow: hidden;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  z-index: 2;
+}
+
+.profile-card img {
+  width: 17em;
+  border-radius: 50%;
+  position: absolute;
+  top: -1em;
+  right: -4em;
+  z-index: 0;
+  transition: 0.7s ease-in-out;
+}
+.profile-card h1 {
+  margin-bottom: 0.8em;
+}
+.profile-card p {
+  margin: 0.2em 0;
+  color: #b8b8b8;
+}
+.profile-card .social {
+  margin-top: 3em;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1em;
+  color: #b8b8b8;
+}
+.profile-card .social a {
+  font-size: 1.2em;
+  color: #000;
+}
+.more {
+  padding: 0 1.5em 0 1.5em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  z-index: 1;
+  color: #fff;
+  transition: 0.5s ease-in;
+  transition-delay: 0.5s;
+}
+.more h2 {
+  margin: 1em 0;
+}
+.more p {
+  margin: 1.5em 0;
+  color: #d6d6d6;
+  line-height: 25px;
+}
+.more ul {
+  padding: 0.5em 2em;
+}
+.more li {
+  margin: 0.5em 0;
+  font-size: 1.2em;
+}
+/* Custom scrollbar */
+.profile-card ::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+.profile-card ::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+/* Handle */
+.profile-card ::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+/* Handle on hover */
+.profile-card ::-webkit-scrollbar-thumb:hover {
+  background: #bcbcbb;
+}
+/* Dynamic classes for JAvascript */
+.profile-card .img-expanded {
+  width: 32em;
+  border-radius: 0;
+}
+.menu-btn-opened {
+  color: #fff;
+  background: #000;
+  padding: 0.5em;
+}
+.overlay-opened {
+  height: 100%;
+}
+.more-opened {
+  height: 100%;
+  padding: 4em 1.5em 1.5em 1.5em;
+  overflow-y: scroll;
+}
